@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pydantic
+pytest
+pytest-asyncio
+black
+flake8
+python-dotenv
