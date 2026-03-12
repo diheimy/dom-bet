@@ -48,3 +48,6 @@ coverage/
 
 # Vercel
 .vercel
+
+# Skills (submodules opcionais)
+.claude/skills/*/

@@ -7,7 +7,19 @@
       "Bash(npm install:*)",
       "Bash(cd /c/Users/DiheimyCastro/projetos/dom-bet/backend && pip install -r requirements.txt)",
       "Bash(\"/c/Program Files/PyManager/python\" -m pip install -r /c/Users/DiheimyCastro/projetos/dom-bet/backend/requirements.txt)",
-      "Bash(gh auth:*)"
+      "Bash(gh auth:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git add:*)",
+      "Bash(which gh:*)",
+      "Bash(\"/c/Users/DiheimyCastro/AppData/Local/Microsoft/WindowsApps/gh\" auth:*)",
+      "Bash(where gh:*)",
+      "Read(//c/ProgramData/**)",
+      "Read(//c/Users/DiheimyCastro/**)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh\" auth status 2>&1)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh\" auth login --web 2>&1 || echo \"É necessário autenticação via browser\")",
+      "Bash(cd /c/Users/DiheimyCastro/projetos/dom-bet/.claude/skills && git clone https://github.com/msitarzewski/agency-agents.git 2>&1)",
+      "Bash(git clone:*)"
     ]
   }
 }

@@ -39,7 +39,25 @@ App de probabilidades de apostas esportivas - sistema de score de jogos de futeb
 - PRs sempre passam pelo checklist de Dom-Security antes do merge
 
 ## Skills disponíveis
-Ver: .claude/skills/
+
+### Skills de Referência (clonados)
+
+**`.claude/skills/get-shit-done`** - Meta-prompting e desenvolvimento spec-driven
+- `/gsd:new-project` - Inicializa projeto: perguntas → pesquisa → requisitos → roadmap
+- `/gsd:discuss-phase [N]` - Captura decisões de implementação
+- `/gsd:plan-phase [N]` - Pesquisa + planeja + verifica fase
+- `/gsd:execute-phase [N]` - Executa planos em ondas paralelas
+- `/gsd:verify-work [N]` - Testes de aceitação do usuário
+- `/gsd:quick` - Tarefas ad-hoc com garantias GSD
+- Docs: [get-shit-done README](.claude/skills/get-shit-done/README.md)
+
+**`.claude/skills/agency-agents`** - Templates de agentes para Claude Code
+
+**`.claude/skills/ui-ux-pro-max-skill`** - Patterns de design e componentes UI/UX
+
+### Agentes Dom Bet
+Ver: [docs/agents-config.md](docs/agents-config.md)
+- Dom-PM, Dom-Architect, Dom-Backend, Dom-Frontend, Dom-DevOps, Dom-QA, Dom-Security
 
 ## Supabase
 - URL do projeto: ${NEXT_PUBLIC_SUPABASE_URL}
