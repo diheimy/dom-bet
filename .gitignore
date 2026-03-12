@@ -1,20 +1,50 @@
+# Dependencies
 node_modules/
+.pnp
+.pnp.js
+
+# Build
 dist/
 build/
 .next/
 .turbo/
+out/
+
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyo
 .venv/
 venv/
+*.egg-info/
+
+# Environment
 .env
 .env.local
 .env.*.local
+!.env.example
+
+# OS
 .DS_Store
 Thumbs.db
 *.log
 logs/
+
+# IDE
 .idea/
 .vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# Testing
 coverage/
 .nyc_output/
+
+# Docker
+*.pid
+*.seed
+*.pid.lock
+
+# Vercel
+.vercel

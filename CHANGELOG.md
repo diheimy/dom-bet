@@ -3,9 +3,30 @@
 ## [Unreleased]
 
 ### Added
-- Bootstrap inicial do projeto via AGENTS.md
-- Configuração do Docker Compose (Frontend + Backend)
-- CLAUDE.md configurado (memória persistente para Claude Code)
-- Hierarquia de agentes: Dom-PM, Architect, Backend, Frontend, DevOps, QA, Security
-- GitHub Actions: CI base
-- PR Template com checklist de agentes
+- Bootstrap inicial via AGENTS.md
+- CLAUDE.md configurado (memória persistente Claude Code)
+- Estrutura de pastas completa (src/, tests/, scripts/)
+- GitHub Actions: CI (lint, test, build) e Deploy → Vercel
+- Supabase SDK e clientes configurados (browser + server)
+- Vercel CLI e vercel.json configurados
+- .env.example atualizado com todas variáveis
+- .gitignore completo
+- README.md e CHANGELOG.md atualizados
+- Middleware de autenticação Supabase (Next.js)
+
+### Changed
+- package.json atualizado com scripts completos
+- CI workflow atualizado para frontend + backend
+
+### Fixed
+
+### Removed
+
+---
+
+## [0.1.0] - Initial Release
+
+### Added
+- Configuração inicial do projeto
+- Docker Compose (Frontend + Backend)
+- Agentes de desenvolvimento (Dom-PM, Dom-Architect, etc.)

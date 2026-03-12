@@ -1,23 +1,39 @@
 {
   "name": "frontend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Dom Bet - App de probabilidades de apostas esportivas",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "test": "jest",
+    "test:unit": "jest tests/unit",
+    "test:integration": "jest tests/integration",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["bet", "sports", "odds", "football"],
+  "author": "Dom",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^30.0.0",
     "@types/node": "^25.4.0",
     "eslint": "^10.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "jest": "^30.3.0",
     "prettier": "^3.8.1",
+    "supabase": "^2.78.1",
+    "ts-jest": "^29.4.6",
     "ts-node": "^10.9.2",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vercel": "^50.32.3"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.9.0",
+    "@supabase/supabase-js": "^2.99.1",
+    "dotenv": "^17.3.1",
+    "zod": "^4.3.6"
   }
 }

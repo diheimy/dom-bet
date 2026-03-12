@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git restore:*)",
+      "Bash(git remote:*)",
+      "Bash(cd frontend:*)",
+      "Bash(npm install:*)",
+      "Bash(cd /c/Users/DiheimyCastro/projetos/dom-bet/backend && pip install -r requirements.txt)",
+      "Bash(\"/c/Program Files/PyManager/python\" -m pip install -r /c/Users/DiheimyCastro/projetos/dom-bet/backend/requirements.txt)",
+      "Bash(gh auth:*)"
+    ]
+  }
+}
