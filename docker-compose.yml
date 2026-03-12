@@ -11,6 +11,10 @@ services:
       - /app/node_modules
     environment:
       - NODE_ENV=development
+    networks:
+      - dom-bet-network
+    depends_on:
+      - backend
 
   backend:
     build:
@@ -21,20 +25,54 @@ services:
       - ./backend:/app
     environment:
       - PYTHONUNBUFFERED=1
-      - DATABASE_URL=postgresql://user:password@db:5432/dbname
+      - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
     depends_on:
-      - db
+      db:
+        condition: service_healthy
+    networks:
+      - dom-bet-network
 
   db:
     image: postgres:15-alpine
+    container_name: dom-bet-db
     environment:
-      - POSTGRES_USER=user
-      - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=dbname
+      - POSTGRES_USER=${POSTGRES_USER:-dombet_user}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-dombet_secure_pass_2026}
+      - POSTGRES_DB=${POSTGRES_DB:-dombet_db}
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d:ro
+    networks:
+      - dom-bet-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-dombet_user} -d ${POSTGRES_DB:-dombet_db}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: dom-bet-portainer
+    ports:
+      - "9000:9000"
+    volumes:
+      - portainer_data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - dom-bet-network
+    restart: unless-stopped
 
 volumes:
   postgres_data:
+    name: dom-bet-postgres-data
+  portainer_data:
+    name: dom-bet-portainer-data
+
+networks:
+  dom-bet-network:
+    name: dom-bet-network
+    driver: bridge

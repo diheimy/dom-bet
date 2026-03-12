@@ -19,7 +19,14 @@
       "Bash(\"/c/Program Files/GitHub CLI/gh\" auth status 2>&1)",
       "Bash(\"/c/Program Files/GitHub CLI/gh\" auth login --web 2>&1 || echo \"É necessário autenticação via browser\")",
       "Bash(cd /c/Users/DiheimyCastro/projetos/dom-bet/.claude/skills && git clone https://github.com/msitarzewski/agency-agents.git 2>&1)",
-      "Bash(git clone:*)"
+      "Bash(git clone:*)",
+      "Bash(chmod +x \"C:/Users/DiheimyCastro/projetos/dom-bet/scripts/db-migrate.sh\")",
+      "Bash(docker-compose config:*)",
+      "Bash(docker-compose down:*)",
+      "Bash(docker-compose up:*)",
+      "Bash(docker-compose ps:*)",
+      "Bash(timeout 30 bash -c 'while ! docker-compose exec -T db pg_isready -U dombet_user -d dombet_db 2>/dev/null; do sleep 2; done' && echo \"Banco pronto!\")",
+      "Bash(docker-compose exec:*)"
     ]
   }
 }
